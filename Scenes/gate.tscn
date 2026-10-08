@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://2vjxh0aytp27"]
+
+[ext_resource type="Script" uid="uid://imdaqc6vpj8k" path="res://Scripts/Gate.cs" id="1_1lkl7"]
+
+[sub_resource type="Gradient" id="Gradient_1lkl7"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wrm1d"]
+gradient = SubResource("Gradient_1lkl7")
+
+[node name="Gate" type="Node2D" unique_id=411903350]
+script = ExtResource("1_1lkl7")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1116398774]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+texture = SubResource("GradientTexture2D_wrm1d")

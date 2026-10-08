@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c3h2vnduueen4"]
+
+[ext_resource type="Script" uid="uid://c0whe0s5kuu3y" path="res://Scripts/Game.cs" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://djrpwiidlpyoy" path="res://Scripts/Camera2d.cs" id="2_3dryh"]
+[ext_resource type="PackedScene" uid="uid://2vjxh0aytp27" path="res://Scenes/gate.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://5urf1s82mhqg" path="res://Scenes/output.tscn" id="3_wrm1d"]
+
+[node name="Game" type="Node2D" unique_id=1521220898]
+script = ExtResource("1_qxrlw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=885402557]
+position_smoothing_enabled = true
+position_smoothing_speed = 12.275
+script = ExtResource("2_3dryh")
+
+[node name="Gate" parent="." unique_id=411903350 instance=ExtResource("2_wrm1d")]
+
+[node name="Output" parent="." unique_id=1573431096 instance=ExtResource("3_wrm1d")]
