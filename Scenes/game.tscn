@@ -9,9 +9,11 @@
 script = ExtResource("1_qxrlw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=885402557]
-position_smoothing_enabled = true
-position_smoothing_speed = 12.275
+limit_enabled = false
+position_smoothing_speed = 12.3
 script = ExtResource("2_3dryh")
+MinZoom = 0.135
+MaxZoom = 99.57
 
 [node name="Gate" parent="." unique_id=411903350 instance=ExtResource("2_wrm1d")]
 

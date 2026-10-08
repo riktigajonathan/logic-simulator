@@ -1,40 +1,62 @@
 using Godot;
-using System;
 
 public partial class Camera2d : Camera2D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-
-	}
+    [Export] public float ZoomStrength = 0.1f;
+    [Export] public float MinZoom = 0.5f;
+    [Export] public float MaxZoom = 3.0f;
+    [Export] public float PanSpeed = 1.0f;
 
     private bool mouseDown = false;
-    private Vector2 originalPos = Vector2.Zero;
-    private Vector2 originalMousePos = Vector2.Zero;
 
     public override void _Input(InputEvent @event)
     {
         if (@event is InputEventMouseButton mouseButton)
         {
-            mouseDown = mouseButton.Pressed;
-
-            if (mouseDown)
+            if (mouseButton.ButtonIndex == MouseButton.Left || 
+                mouseButton.ButtonIndex == MouseButton.Middle)
             {
-                originalPos = Position;
-                originalMousePos = mouseButton.Position;
+                mouseDown = mouseButton.Pressed;
+            }
+
+            if (mouseButton.ButtonIndex == MouseButton.WheelUp)
+            {
+                ZoomAtMouse(mouseButton.Position, ZoomStrength);
+            }
+            else if (mouseButton.ButtonIndex == MouseButton.WheelDown)
+            {
+                ZoomAtMouse(mouseButton.Position, -ZoomStrength);
             }
         }
+
         if (mouseDown && @event is InputEventMouseMotion mouseMotion)
         {
-            Vector2 mouseDelta = mouseMotion.Position - originalMousePos;
-            Position = originalPos - mouseDelta;
+            Position -= mouseMotion.Relative / Zoom * PanSpeed;
         }
+    }
+
+    private void ZoomAtMouse(Vector2 mousePosition, float amount)
+    {
+        float oldZoom = Zoom.X;
+
+        float newZoom = Mathf.Clamp(
+            oldZoom + amount,
+            MinZoom,
+            MaxZoom
+        );
+
+        if (Mathf.IsEqualApprox(oldZoom, newZoom))
+            return;
+
+        Vector2 viewportCenter = GetViewportRect().Size / 2.0f;
+        Vector2 mouseOffset = mousePosition - viewportCenter;
+
+        Vector2 beforeZoom = GlobalPosition + mouseOffset / oldZoom;
+
+        Zoom = Vector2.One * newZoom;
+
+        Vector2 afterZoom = GlobalPosition + mouseOffset / newZoom;
+
+        GlobalPosition += beforeZoom - afterZoom;
     }
 }

@@ -12,7 +12,7 @@ script = ExtResource("1_1lkl7")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1116398774]
 offset_left = -24.0
-offset_top = -24.0
+offset_top = -8.0
 offset_right = 24.0
-offset_bottom = 24.0
+offset_bottom = 8.0
 texture = SubResource("GradientTexture2D_wrm1d")
