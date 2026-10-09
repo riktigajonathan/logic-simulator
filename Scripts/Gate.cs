@@ -2,11 +2,9 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class Gate : Output
+public partial class Gate : Node2D
 {
 	private Dictionary<bool[], bool[]> truth_table = new();
-	private bool[] input;
-	private Output output;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
