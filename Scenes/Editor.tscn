@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c3h2vnduueen4"]
 
+[ext_resource type="Script" uid="uid://b0ygxbc0nh368" path="res://Scripts/Editor.cs" id="1_0hhuw"]
 [ext_resource type="Script" uid="uid://djrpwiidlpyoy" path="res://Scripts/Camera2d.cs" id="1_0lbib"]
 
 [node name="Editor" type="Node2D" unique_id=1521220898]
+script = ExtResource("1_0hhuw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=885402557]
 limit_enabled = false
