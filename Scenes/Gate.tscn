@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://2vjxh0aytp27"]
 
+[ext_resource type="Script" uid="uid://brq2uxillbkr2" path="res://Scripts/Components/Gate.cs" id="1_nrts1"]
 [ext_resource type="PackedScene" uid="uid://5urf1s82mhqg" path="res://Scenes/Pin.tscn" id="2_hn85u"]
 
 [sub_resource type="Gradient" id="Gradient_1lkl7"]
@@ -9,7 +10,8 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3dryh"]
 gradient = SubResource("Gradient_1lkl7")
 
-[node name="CircuitComponent" type="Node2D" unique_id=411903350]
+[node name="Gate" type="Node2D" unique_id=411903350]
+script = ExtResource("1_nrts1")
 
 [node name="Control" type="Control" parent="." unique_id=907622721]
 layout_mode = 3
