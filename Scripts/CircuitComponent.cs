@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public partial class Gate : Node2D
+public partial class CircuitComponent : Node2D
 {
 	private Dictionary<bool[], bool[]> truth_table = new();
 

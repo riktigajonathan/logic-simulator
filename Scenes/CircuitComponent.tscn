@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2vjxh0aytp27"]
 
-[ext_resource type="Script" uid="uid://imdaqc6vpj8k" path="res://Scripts/Gate.cs" id="1_1lkl7"]
-[ext_resource type="PackedScene" uid="uid://5urf1s82mhqg" path="res://Scenes/connection.tscn" id="2_hn85u"]
+[ext_resource type="Script" uid="uid://imdaqc6vpj8k" path="res://Scripts/CircuitComponent.cs" id="1_jx5bf"]
+[ext_resource type="PackedScene" uid="uid://5urf1s82mhqg" path="res://Scenes/Pin.tscn" id="2_hn85u"]
 
 [sub_resource type="Gradient" id="Gradient_1lkl7"]
 offsets = PackedFloat32Array(1)
@@ -10,8 +10,8 @@ colors = PackedColorArray(1, 1, 1, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3dryh"]
 gradient = SubResource("Gradient_1lkl7")
 
-[node name="Gate" type="Node2D" unique_id=411903350]
-script = ExtResource("1_1lkl7")
+[node name="CircuitComponent" type="Node2D" unique_id=411903350]
+script = ExtResource("1_jx5bf")
 
 [node name="Control" type="Control" parent="." unique_id=907622721]
 layout_mode = 3
@@ -43,7 +43,7 @@ anchor_bottom = 1.0
 grow_vertical = 2
 alignment = 1
 
-[node name="Connection" parent="Control/Input" unique_id=1616203304 instance=ExtResource("2_hn85u")]
+[node name="Pin" parent="Control/Input" unique_id=1616203304 instance=ExtResource("2_hn85u")]
 layout_mode = 2
 
 [node name="Output" type="VBoxContainer" parent="Control" unique_id=823114516]
@@ -56,5 +56,5 @@ grow_horizontal = 0
 grow_vertical = 2
 alignment = 1
 
-[node name="Connection" parent="Control/Output" unique_id=1315172136 instance=ExtResource("2_hn85u")]
+[node name="Pin" parent="Control/Output" unique_id=1315172136 instance=ExtResource("2_hn85u")]
 layout_mode = 2
