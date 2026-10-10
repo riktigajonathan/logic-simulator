@@ -12,7 +12,7 @@ public partial class Wire
             throw new ArgumentException("wire source must be an output");
 
         if (destination.Direction != PinDirection.Input)
-            throw new ArgumentException("wire destination must be input");
+            throw new ArgumentException("wire destination must be an input");
 
         Source = source;
         Destination = destination;
