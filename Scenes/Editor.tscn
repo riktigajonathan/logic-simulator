@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c3h2vnduueen4"]
 
-[ext_resource type="Script" uid="uid://djrpwiidlpyoy" path="res://Scripts/Camera2d.cs" id="2_kldst"]
+[ext_resource type="Script" uid="uid://djrpwiidlpyoy" path="res://Scripts/Camera2d.cs" id="1_0lbib"]
 
-[node name="Main" type="Node2D" unique_id=1521220898]
+[node name="Editor" type="Node2D" unique_id=1521220898]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=885402557]
 limit_enabled = false
 position_smoothing_speed = 12.3
-script = ExtResource("2_kldst")
+script = ExtResource("1_0lbib")
 MinZoom = 0.135
 MaxZoom = 99.57

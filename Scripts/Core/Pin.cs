@@ -7,6 +7,8 @@ public partial class Pin
     public PinDirection Direction { get; }
     public int Index { get; }
 
+    public bool Value { get; set; } = false;
+
     public Pin(CircuitComponent owner, PinDirection direction, int index)
     {
         Owner = owner;
