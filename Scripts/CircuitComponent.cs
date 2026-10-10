@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public abstract class CircuitComponent
+public abstract partial class CircuitComponent
 {
     public List<Pin> Inputs { get; } = new();
     public List<Pin> Outputs { get; } = new();
