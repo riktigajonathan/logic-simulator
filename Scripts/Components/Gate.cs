@@ -6,10 +6,7 @@ public class Gate : CircuitComponent
 {
     private readonly Dictionary<uint, bool[]> _truthTable = new();
 
-    public Gate(
-        int inputCount,
-        int outputCount,
-        Func<bool[], bool[]> logic)
+    public Gate(int inputCount, int outputCount, Func<bool[], bool[]> logic)
     {
         if (inputCount < 1 || inputCount > 20)
             throw new ArgumentOutOfRangeException(nameof(inputCount));
