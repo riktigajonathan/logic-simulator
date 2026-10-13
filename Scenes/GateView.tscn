@@ -43,7 +43,7 @@ anchor_bottom = 1.0
 grow_vertical = 2
 alignment = 1
 
-[node name="Pin" parent="Control/Input" unique_id=1616203304 instance=ExtResource("1_hmn0f")]
+[node name="PinView" parent="Control/Input" unique_id=1616203304 instance=ExtResource("1_hmn0f")]
 layout_mode = 2
 
 [node name="Output" type="VBoxContainer" parent="Control" unique_id=823114516]
@@ -56,5 +56,5 @@ grow_horizontal = 0
 grow_vertical = 2
 alignment = 1
 
-[node name="Pin" parent="Control/Output" unique_id=1315172136 instance=ExtResource("1_hmn0f")]
+[node name="PinView" parent="Control/Output" unique_id=1315172136 instance=ExtResource("1_hmn0f")]
 layout_mode = 2
