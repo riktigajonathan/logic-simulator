@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://2vjxh0aytp27"]
 
 [ext_resource type="Script" uid="uid://d2phq4lma207j" path="res://Scripts/Views/GateView.cs" id="1_14sin"]
-[ext_resource type="PackedScene" uid="uid://5urf1s82mhqg" path="res://Scenes/Pin.tscn" id="1_hmn0f"]
+[ext_resource type="PackedScene" uid="uid://5urf1s82mhqg" path="res://Scenes/PinView.tscn" id="1_hmn0f"]
 
 [sub_resource type="Gradient" id="Gradient_1lkl7"]
 offsets = PackedFloat32Array(1)

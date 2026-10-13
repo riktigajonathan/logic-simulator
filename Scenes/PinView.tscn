@@ -7,7 +7,7 @@ colors = PackedColorArray(0, 0, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0a2ph"]
 gradient = SubResource("Gradient_3ja0c")
 
-[node name="Pin" type="Control" unique_id=1616203304]
+[node name="PinView" type="Control" unique_id=1616203304]
 layout_mode = 3
 anchors_preset = 0
 
