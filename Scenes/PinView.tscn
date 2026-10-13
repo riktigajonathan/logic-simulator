@@ -12,6 +12,10 @@ gradient = SubResource("Gradient_3ja0c")
 [node name="PinView" type="Control" unique_id=1616203304]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_xh6nn")
 
 [node name="Texture" type="TextureRect" parent="." unique_id=1512598342]
@@ -29,3 +33,4 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_0a2ph")
 expand_mode = 1
+stretch_mode = 5
