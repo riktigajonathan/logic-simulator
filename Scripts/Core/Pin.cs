@@ -3,6 +3,8 @@ using System;
 
 public partial class Pin
 {
+    public PinView View;
+
     public CircuitComponent Owner { get; }
     public PinDirection Direction { get; }
     public int Index { get; }

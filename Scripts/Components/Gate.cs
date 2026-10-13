@@ -6,7 +6,7 @@ public partial class Gate : CircuitComponent
 {
 	private int[] _truthTable;
 
-    public Gate(int[] table, int inputCount = 2, int outputCount = 1)
+    public Gate(int[] table, int inputCount = 2, int outputCount = 1) : base()
     {
         for (int i = 0; i < inputCount; i++)
             AddInput();
